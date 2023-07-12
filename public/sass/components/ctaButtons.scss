@@ -1,0 +1,39 @@
+.cta-container {
+	display: none;
+	z-index: 10000;
+	@media (max-width: 574px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex: 1;
+	}
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 1rem;
+	backdrop-filter: blur(10px);
+
+	@media (max-width: 399px) {
+		padding: 0;
+	}
+	button {
+		width: 100%;
+
+		@media (max-width: 435px) {
+			font-size: 14px;
+			padding: 15px !important;
+			border-radius: 0;
+		}
+		@media (max-width: 330px) {
+			font-size: 7px;
+			padding: 0 !important;
+		}
+	}
+}
+.footer-icon {
+	color: #fff;
+	margin-right: 10px;
+	font-size: 18px;
+}

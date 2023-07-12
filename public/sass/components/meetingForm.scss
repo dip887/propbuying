@@ -1,0 +1,35 @@
+.meeting-form-container {
+  form {
+    .appointment-type-container {
+      flex: 1 !important;
+      width: 100%;
+      button {
+        width: 100%;
+        &.active {
+          outline: none;
+          border: 1px solid #f37a21 !important;
+        }
+      }
+    }
+
+    .css-13cymwt-control,
+    .css-t3ipsp-control {
+      padding: 0px 10px !important;
+    }
+    .req-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #1177b3;
+      color: white;
+      font-weight: 500;
+      border-radius: 4px;
+      border: 1px solid white;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        background-color: white;
+        color: #1177b3;
+        border: 1px solid #1177b3;
+      }
+    }
+  }
+}
