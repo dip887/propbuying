@@ -6,7 +6,7 @@ export default function ScrollToTop() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		const storedUser = JSON.parse(localStorage.getItem('currentUser'));
+		const storedUser = JSON.parse(JSON.stringify(localStorage.getItem('currentUser')));
 		if (storedUser) {
 			dispatch(setUser(storedUser));
 		}
