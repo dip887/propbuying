@@ -579,7 +579,7 @@ const HotelSingleV1Dynamic = ({ data, similarPropertiesData }) => {
 
 									<MapComponent lat={data[0].geolocation.lat} lng={data[0].geolocation.lng} />
 								</div>
-								{data[0].offers.map((o, i) => (
+								{data[0].offers&&data[0].offers.map((o, i) => (
 									<div className="col-12" key={i}>
 										<h3 class="text-22 fw-500 pt-40 border-top-light mb-30">
 											{data[0].developerName} {data[0].title} Current Offer

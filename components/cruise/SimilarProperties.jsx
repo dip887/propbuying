@@ -37,9 +37,7 @@ const SimilarProperties = ({ similarProperties }) => {
         {similarProperties !== null &&
           similarProperties.map((item) => (
             <SwiperSlide key={item.id}>
-              <Link href={`/hotel/hotel-single-v1/${item.slug}`}>
-                <PropertyCard property={item} />
-              </Link>
+                 <PropertyCard property={item} />
             </SwiperSlide>
           ))}
       </Swiper>
