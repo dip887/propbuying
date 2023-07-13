@@ -15,6 +15,7 @@ import Link from "next/link";
 import { setUser } from "../../features/auth/authSlice";
 
 const SignUpForm = () => {
+  const [iPhoneNumber, setIPhoneNumber] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [otp, setOtp] = useState("");
@@ -119,6 +120,7 @@ const SignUpForm = () => {
   };
 
   const handlePhoneNumberChange = (val, countryData, object, number) => {
+    setIPhoneNumber(countryData)
     if (!val) {
       setNumberError("Invalid phone number");
       return;
@@ -192,6 +194,8 @@ const SignUpForm = () => {
               <IntlTelInput
                 containerClassName="intl-tel-input"
                 inputClassName="form-control"
+                value={iPhoneNumber}
+                separateDialCode={true}
                 onPhoneNumberChange={handlePhoneNumberChange}
                 required
                 defaultCountry="in"
