@@ -53,7 +53,8 @@ const MobileMenu = () => {
       <ProSidebarProvider>
         <Sidebar width="400" backgroundColor="#fff">
           <Menu>
-            <SubMenu label="Home">
+            {/* Home */}
+            <SubMenu label="About us">
               {homeItems.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -73,8 +74,8 @@ const MobileMenu = () => {
               ))}
             </SubMenu>
             {/* End  All Home Menu */}
-
-            <SubMenu label="Categories">
+            {/* Categories */}
+            <SubMenu label="Careers">
               {categorieMobileItems.map((item) => (
                 <SubMenu label={item.title} key={item.id}>
                   {item.menuItems.map((single) => (
@@ -103,7 +104,7 @@ const MobileMenu = () => {
             </SubMenu>
             {/* End  All Categories Menu */}
 
-            <MenuItem
+            {/* <MenuItem
               component={
                 <Link
                   href="/destinations"
@@ -116,10 +117,10 @@ const MobileMenu = () => {
               }
             >
               Desitinations
-            </MenuItem>
+            </MenuItem> */}
             {/* End  Desitinations Menu */}
 
-            <SubMenu label="Blog">
+            {/* <SubMenu label="Blog">
               {blogItems.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -137,10 +138,10 @@ const MobileMenu = () => {
                   {item.name}
                 </MenuItem>
               ))}
-            </SubMenu>
+            </SubMenu> */}
             {/* End  All Blog Menu */}
 
-            <SubMenu label="Pages">
+            <SubMenu label="Services">
               {pageItems.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -161,7 +162,7 @@ const MobileMenu = () => {
             </SubMenu>
             {/* End  All Pages Menu */}
 
-            <SubMenu label="Dashboard">
+            {/* <SubMenu label="Dashboard">
               {dashboardItems.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -179,7 +180,7 @@ const MobileMenu = () => {
                   {item.name}
                 </MenuItem>
               ))}
-            </SubMenu>
+            </SubMenu> */}
             {/* End  All Dashboard Menu */}
 
             <MenuItem
@@ -192,7 +193,40 @@ const MobileMenu = () => {
                 />
               }
             >
-              Contact
+              Contact Us
+            </MenuItem>
+            {/* End Contact  Menu */}
+            <MenuItem
+              component={
+                <Link
+                  href="/"
+                  className={router.pathname === "/" ? "menu-active-link" : ""}
+                />
+              }
+            >
+              Terms & Conditions
+            </MenuItem>
+            {/* End Contact  Menu */}
+            <MenuItem
+              component={
+                <Link
+                  href="/"
+                  className={router.pathname === "/" ? "menu-active-link" : ""}
+                />
+              }
+            >
+              Policy of Use
+            </MenuItem>
+            {/* End Contact  Menu */}
+            <MenuItem
+              component={
+                <Link
+                  href="/"
+                  className={router.pathname === "/" ? "menu-active-link" : ""}
+                />
+              }
+            >
+              Sitemap
             </MenuItem>
             {/* End Contact  Menu */}
           </Menu>
