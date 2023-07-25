@@ -31,7 +31,7 @@ const EnquireNowModal = ({
 	const [name, setName] = useState('');
 
 	useEffect(() => {
-		if (currentUser && currentUser.providerData[0]) {
+		if (currentUser && currentUser.providerData && currentUser.providerData[0]) {
 			const enquiryData = JSON.parse(localStorage.getItem('enquiryData'));
 			const data = {
 				email: enquiryData?.email || currentUser.providerData[0].email || '',

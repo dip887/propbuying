@@ -68,9 +68,15 @@ const PoularDestinations = () => {
         >
           <Link
             href={`/projects-in-${item.slug}-pune`}
-            className="citiesCard -type-5 d-flex items-center sm:flex-column sm:items-start px-20 py-20 sm:px-15 sm:py-20 bg-light-2 rounded-4"
+            className="citiesCard -type-5 d-flex items-center sm:flex-column sm:items-start px-20 py-20 sm:px-15 sm:py-20 bg-light-2 rounded-4 "
           >
             <FiMapPin className="text-24" />
+            {/* <div className="card" style="width: 18rem;">
+              <div className="card-body">
+                <h5 className="card-title">{item.localityName}</h5>
+                <p className="card-text">{item.shortDescription}</p>
+              </div>
+            </div> */}
             <div className="ml-10 sm:ml-0 sm:mt-10">
               <h4 className="text-16 fw-500">{item.localityName}</h4>
               <p className="text-14">{item.shortDescription}</p>
